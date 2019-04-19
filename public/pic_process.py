@@ -3,7 +3,7 @@
 import os
 import base64
 import traceback as tbk
-import aa
+#import aa
 
 class pic_proc:
     _pic_src_addr = ""
@@ -68,7 +68,7 @@ class pic_proc:
  
 
 if '__main__' == __name__:
-    p = pic_proc("./aa.jpg")
+    p = pic_proc("./cj_pic.png")
     p.pic2py()
     #print(aa.base64_str)
     #p.parse_test()
