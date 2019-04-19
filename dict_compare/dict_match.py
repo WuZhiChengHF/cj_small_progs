@@ -1,13 +1,16 @@
+#!/usr/bin/python3
+#coding: utf-8
 import tkinter
 from tkinter import *
 from tkinter import messagebox
 import tkinter.filedialog as fdi
 import re
-#coding: utf-8
-
 from xls_process import *
+import pic_gen as pgen
+import cj_pic as cj
 
 compare_dict = {}
+pg = pgen.pic_proc()
 
 def fpath_choice(flag):
     filename = fdi.askopenfilename()
@@ -114,6 +117,8 @@ col_add.grid(row=3, column=4, padx=10)
 #sheet_add_value.grid(row=4, column=3, padx=10)
 #col_add_value=Entry(root, width=6)
 #col_add_value.grid(row=4, column=4, padx=10)
+
+pg.get_pic(cj.base64_str_cj_pic, "./cj_pic.png")
 #添加图片
 photo = PhotoImage(file="./cj_pic.png")
 Label(root, image=photo).grid(row=1, column=5, rowspan=3, padx=5, pady=5)
