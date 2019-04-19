@@ -11,6 +11,7 @@ import cj_pic as cj
 
 compare_dict = {}
 pg = pgen.pic_proc()
+cj_pic_path = "./.cj_pic.png"
 
 def fpath_choice(flag):
     filename = fdi.askopenfilename()
@@ -118,9 +119,9 @@ col_add.grid(row=3, column=4, padx=10)
 #col_add_value=Entry(root, width=6)
 #col_add_value.grid(row=4, column=4, padx=10)
 
-pg.get_pic(cj.base64_str_cj_pic, "./cj_pic.png")
+pg.get_pic(cj.base64_str_cj_pic, cj_pic_path)
 #添加图片
-photo = PhotoImage(file="./cj_pic.png")
+photo = PhotoImage(file=cj_pic_path)
 Label(root, image=photo).grid(row=1, column=5, rowspan=3, padx=5, pady=5)
 #添加提交按钮
 Button(text="提交", width=10, command=summit).grid(row=5, columnspan=8, pady=20)
