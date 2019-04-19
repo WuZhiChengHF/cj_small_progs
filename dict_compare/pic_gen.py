@@ -24,8 +24,6 @@ class pic_proc:
             print("parse failed ... ")
             tbk.print_exc()
 
-
-if '__main__' == __name__:
-    pp = pic_proc()
-    pp.get_pic(cj.base64_str_cj_pic, "./cj_pic2.png")
-
+#if '__main__' == __name__:
+#    pp = pic_proc()
+#    pp.get_pic(cj.base64_str_cj_pic, "./cj_pic2.png")
