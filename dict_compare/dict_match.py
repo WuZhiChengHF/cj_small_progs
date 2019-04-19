@@ -3,7 +3,7 @@ from tkinter import *
 from tkinter import messagebox
 import tkinter.filedialog as fdi
 import re
-#coding=utf-8
+#coding: utf-8
 
 from xls_process import *
 
