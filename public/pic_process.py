@@ -1,5 +1,6 @@
 #!/bin/python3
 
+import os
 import base64
 import traceback as tbk
 import aa
@@ -21,6 +22,8 @@ class pic_proc:
             self._pic_dst_addr = dstaddr
 
         #如果文件不存在,则创建文件
+        if not os.path.exists(self._pic_dst_addr):
+            os.system(r"touch {}".format(self._pic_dst_addr))
 
         if pic_name == "":
             pos1 = srcaddr.rfind("/")
@@ -58,7 +61,7 @@ class pic_proc:
     def parse_test(self):
         try:
             with open("./test.jpg", 'wb') as fw:
-                fw.write(base64.b64decode(aa.base64_str_aa.encode()))
+                fw.write(base64.b64decode(aa.base64_str_aa))
                 print("parse success ... ")
         except:
             print("parse failed ... ")
@@ -66,6 +69,6 @@ class pic_proc:
 
 if '__main__' == __name__:
     p = pic_proc("./aa.jpg")
-    #p.pic2py()
+    p.pic2py()
     #print(aa.base64_str)
-    p.parse_test()
+    #p.parse_test()
