@@ -1,1 +1,0 @@
-pyinstaller.exe -F -w  dict_match.py xls_process.py
