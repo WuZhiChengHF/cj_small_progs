@@ -1,0 +1,1 @@
+pyuic5.exe DictCmp.ui -o DictCmp.py
